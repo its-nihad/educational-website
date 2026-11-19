@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Details | Eastberg Educational Institution</title>
+  <!-- Google Fonts: Montserrat & Poppins[span_0](start_span)[span_0](end_span) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #8C2C3F; /*[span_1](start_span)[span_1](end_span) */
+      --accent: #FCB433;  /*[span_2](start_span)[span_2](end_span) */
+      --white: #FFFFFF;   /*[span_3](start_span)[span_3](end_span) */
+      --surface: #FDF8F9;
+      --text-dark: #2B181D;
+      --text-muted: #665257;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif; /*[span_4](start_span)[span_4](end_span) */
+      background-color: var(--white); /*[span_5](start_span)[span_5](end_span) */
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: 'Montserrat', sans-serif; /*[span_6](start_span)[span_6](end_span) */
+      color: var(--primary); /*[span_7](start_span)[span_7](end_span) */
+    }
+
+    /* Header */
+    header {
+      background-color: var(--white); /*[span_8](start_span)[span_8](end_span) */
+      border-bottom: 2px solid var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent); /*[span_9](start_span)[span_9](end_span) */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--primary); /*[span_10](start_span)[span_10](end_span) */
+      font-weight: 600;
+    }
+
+    .btn-apply {
+      background-color: var(--accent); /*[span_11](start_span)[span_11](end_span) */
+      color: var(--primary) !important; /*[span_12](start_span)[span_12](end_span) */
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+
+    /* Article Header */
+    .post-header {
+      background-color: var(--primary); /*[span_13](start_span)[span_13](end_span) */
+      color: var(--white); /*[span_14](start_span)[span_14](end_span) */
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .post-category {
+      display: inline-block;
+      background-color: var(--accent); /*[span_15](start_span)[span_15](end_span) */
+      color: var(--primary); /*[span_16](start_span)[span_16](end_span) */
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .post-header h1 {
+      color: var(--white); /*[span_17](start_span)[span_17](end_span) */
+      font-size: 2.25rem;
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      line-height: 1.25;
+    }
+
+    .post-meta {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--primary); /*[span_18](start_span)[span_18](end_span) */
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--accent); /*[span_19](start_span)[span_19](end_span) */
+    }
+
+    .featured-box {
+      background-color: var(--surface);
+      border-left: 5px solid var(--accent); /*[span_20](start_span)[span_20](end_span) */
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      font-style: italic;
+      color: var(--text-dark);
+    }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .article-body h2 {
+      font-size: 1.5rem;
+      margin: 2rem 0 0.75rem;
+    }
+
+    .article-body ul {
+      margin: 0 0 1.5rem 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    .article-body li::marker {
+      color: var(--accent); /*[span_21](start_span)[span_21](end_span) */
+    }
+
+    /* Author Box */
+    .author-box {
+      background-color: var(--surface);
+      border: 1px solid #EFE4E6;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      background-color: var(--primary); /*[span_22](start_span)[span_22](end_span) */
+      color: var(--accent); /*[span_23](start_span)[span_23](end_span) */
+      font-family: 'Montserrat', sans-serif; /*[span_24](start_span)[span_24](end_span) */
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .author-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary); /*[span_25](start_span)[span_25](end_span) */
+      color: var(--white); /*[span_26](start_span)[span_26](end_span) */
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    footer span {
+      color: var(--accent); /*[span_27](start_span)[span_27](end_span) */
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 1.75rem;
+      }
+      .author-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">EAST<span>BERG</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog_details.html" class="active">Blog</a></li>
+          <li><a href="index.html#admissions" class="btn-apply">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Title Banner -->
+  <section class="post-header">
+    <span class="post-category">Campus &amp; Research</span>
+    <h1>Inventing and making it happen: How Students Turn Ideas into Real Projects</h1> <!--[span_28](start_span)[span_28](end_span) -->
+    <p class="post-meta">By Prof. Meera Nair &bull; November 12, 2026 &bull; 4 min read</p>
+  </section>
+
+  <!-- Main Article -->
+  <main class="container">
+    <a href="index.html" class="back-link">&larr; Back to Eastberg Home</a>
+
+    <div class="featured-box">
+      “True learning happens when classroom theory meets practical experimentation—giving students the space to test, fail, refine, and build.”
+    </div>
+
+    <article class="article-body">
+      <p>At Eastberg Educational Institution, education goes beyond lectures and textbooks. From their very first semester, students are encouraged to explore real-world problems and prototype solutions across laboratories, studios, and community initiatives.</p>
+
+      <h2>From Classroom Concepts to Working Prototypes</h2>
+      <p>Whether designing smart irrigation sensors, analysing open datasets, or building sustainable campus models, interdisciplinary teams work closely with faculty mentors to move ideas from paper to practice.</p>
+
+      <ul>
+        <li>Hands-on lab hours integrated into core undergraduate and postgraduate courses.</li>
+        <li>Cross-departmental teamwork pairing computer science, design, and management students.</li>
+        <li>Semesterly showcase days where student teams present working prototypes to mentors and industry guests.</li>
+      </ul>
+
+      <h2>Building Confidence Through Mentorship</h2>
+      <p>Every student brings a different pace and perspective. Structured mentorship helps learners break complex challenges into clear milestones so they can focus on problem-solving rather than getting stuck on setup hurdles.</p>
+    </article>
+
+    <!-- Author Card -->
+    <div class="author-box">
+      <div class="author-avatar">MN</div>
+      <div class="author-info">
+        <h3>Prof. Meera Nair</h3>
+        <p>Vice-Chancellor at Eastberg Educational Institution, leading initiatives in experiential learning, applied research, and student innovation.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <span>Eastberg Educational Institution</span>. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
