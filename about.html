@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Eastberg Educational Institution</title>
+  <!-- Google Fonts: Montserrat & Poppins[span_0](start_span)[span_0](end_span) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary: #8C2C3F;      /* Burgundy[span_1](start_span)[span_1](end_span) */
+      --accent: #FCB433;       /* Golden Amber[span_2](start_span)[span_2](end_span) */
+      --white: #FFFFFF;        /* Pure White[span_3](start_span)[span_3](end_span) */
+      --surface: #FDF8F9;      /* Soft Burgundy Tint */
+      --text-dark: #2B181D;
+      --text-muted: #665257;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif; /*[span_4](start_span)[span_4](end_span) */
+      background-color: var(--white); /*[span_5](start_span)[span_5](end_span) */
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: 'Montserrat', sans-serif; /*[span_6](start_span)[span_6](end_span) */
+      color: var(--primary); /*[span_7](start_span)[span_7](end_span) */
+    }
+
+    /* Navigation */
+    header {
+      background-color: var(--white); /*[span_8](start_span)[span_8](end_span) */
+      border-bottom: 2px solid var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--accent); /*[span_9](start_span)[span_9](end_span) */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--primary); /*[span_10](start_span)[span_10](end_span) */
+      font-weight: 600;
+    }
+
+    .btn-apply {
+      background-color: var(--accent); /*[span_11](start_span)[span_11](end_span) */
+      color: var(--primary); /*[span_12](start_span)[span_12](end_span) */
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .btn-apply:hover {
+      background-color: var(--primary); /*[span_13](start_span)[span_13](end_span) */
+      color: var(--white); /*[span_14](start_span)[span_14](end_span) */
+    }
+
+    /* Hero Banner */
+    .page-hero {
+      background-color: var(--primary); /*[span_15](start_span)[span_15](end_span) */
+      color: var(--white); /*[span_16](start_span)[span_16](end_span) */
+      padding: 4.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      color: var(--accent); /*[span_17](start_span)[span_17](end_span) */
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 {
+      color: var(--white); /*[span_18](start_span)[span_18](end_span) */
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-weight: 300;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    /* Content Sections */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .section-tag {
+      color: var(--accent); /*[span_19](start_span)[span_19](end_span) */
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .stats-card {
+      background-color: var(--surface);
+      border-left: 5px solid var(--accent); /*[span_20](start_span)[span_20](end_span) */
+      padding: 2rem;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-item h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary); /*[span_21](start_span)[span_21](end_span) */
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Mission & Vision */
+    .mv-section {
+      background-color: var(--surface);
+      padding: 4rem 1.5rem;
+    }
+
+    .mv-grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .mv-card {
+      background-color: var(--white); /*[span_22](start_span)[span_22](end_span) */
+      padding: 2rem;
+      border-radius: 10px;
+      border-top: 4px solid var(--primary); /*[span_23](start_span)[span_23](end_span) */
+      box-shadow: 0 4px 14px rgba(140, 44, 63, 0.06);
+    }
+
+    .mv-card.accent-border {
+      border-top-color: var(--accent); /*[span_24](start_span)[span_24](end_span) */
+    }
+
+    .mv-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .mv-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Leadership */
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      background-color: var(--white); /*[span_25](start_span)[span_25](end_span) */
+      border: 1px solid #EFE4E6;
+      border-radius: 10px;
+      padding: 1.75rem;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      background-color: var(--primary); /*[span_26](start_span)[span_26](end_span) */
+      color: var(--accent); /*[span_27](start_span)[span_27](end_span) */
+      font-family: 'Montserrat', sans-serif; /*[span_28](start_span)[span_28](end_span) */
+      font-weight: 700;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .team-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      color: var(--accent); /*[span_29](start_span)[span_29](end_span) */
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .team-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary); /*[span_30](start_span)[span_30](end_span) */
+      color: var(--white); /*[span_31](start_span)[span_31](end_span) */
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--accent); /*[span_32](start_span)[span_32](end_span) */
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .page-hero h1 {
+        font-size: 2rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">EAST<span>BERG</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="index.html#academics">Programs</a></li>
+          <li><a href="index.html#admissions" class="btn-apply">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <span class="badge">Our Legacy &amp; Purpose</span>
+    <h1>Inventing and making it happen</h1> <!--[span_33](start_span)[span_33](end_span) -->
+    <p>Founded to nurture curious minds and practical innovators, Eastberg Educational Institution blends rigorous academic foundations with hands-on discovery.</p>
+  </section>
+
+  <!-- Institution Overview -->
+  <section class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-tag">Who We Are</span>
+        <h2>Shaping Tomorrow’s Thinkers &amp; Builders</h2>
+        <p>Established in 1998, Eastberg has grown from a regional college into a multidisciplinary institution recognized for academic excellence, industry-integrated curricula, and vibrant campus life.</p>
+        <p>Our faculty mentors students across engineering, management, sciences, and liberal arts—ensuring every graduate leaves ready to lead with integrity and skill.</p>
+      </div>
+      <div class="stats-card">
+        <div class="stat-item">
+          <h3>25+</h3>
+          <p>Years of Academic Excellence</p>
+        </div>
+        <div class="stat-item">
+          <h3>12,000+</h3>
+          <p>Global Alumni Network</p>
+        </div>
+        <div class="stat-item">
+          <h3>96%</h3>
+          <p>Placement &amp; Higher Ed Rate</p>
+        </div>
+        <div class="stat-item">
+          <h3>45+</h3>
+          <p>Research &amp; Innovation Labs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mv-section">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <h3>Our Mission</h3>
+        <p>To deliver accessible, forward-looking education that empowers students to solve real-world challenges through critical inquiry, ethical leadership, and collaborative innovation.</p>
+      </div>
+      <div class="mv-card accent-border">
+        <h3>Our Vision</h3>
+        <p>To stand as a premier centre of learning where interdisciplinary research, inclusive community values, and lifelong curiosity converge to create lasting societal impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="container">
+    <div class="section-header">
+      <span class="section-tag">Academic Governance</span>
+      <h2>Leadership Council</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar">AR</div>
+        <h3>Dr. Arvind Ramanathan</h3>
+        <span class="team-role">Chancellor</span>
+        <p>Over three decades of experience in higher education policy, curriculum reform, and institutional development.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar">MN</div>
+        <h3>Prof. Meera Nair</h3>
+        <span class="team-role">Vice-Chancellor</span>
+        <p>Renowned researcher in computational sciences and advocate for experiential, project-based learning.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar">SK</div>
+        <h3>Dr. Siddharth Krishnan</h3>
+        <span class="team-role">Dean of Academics</span>
+        <p>Spearheads industry partnerships, student mentorship programs, and international academic exchanges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <span>Eastberg Educational Institution</span>. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
