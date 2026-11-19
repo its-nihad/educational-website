@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Maintenance | Eastberg Educational Institution</title>
+  <!-- Google Fonts: Montserrat & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #8C2C3F;
+      --accent: #FCB433;
+      --white: #FFFFFF;
+      --surface: #FDF8F9;
+      --text-dark: #2B181D;
+      --text-muted: #665257;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+
+    h1, h2, .logo {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+    }
+
+    /* Header */
+    header {
+      background-color: var(--white);
+      border-bottom: 2px solid var(--surface);
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .header-tag {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      background-color: var(--surface);
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .maintenance-box {
+      max-width: 600px;
+      background-color: var(--surface);
+      border-top: 5px solid var(--primary);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      box-shadow: 0 6px 20px rgba(140, 44, 63, 0.06);
+    }
+
+    .status-badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .maintenance-box h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+    }
+
+    .maintenance-box p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .info-strip {
+      background-color: var(--white);
+      border: 1px solid #EFE4E6;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .info-strip strong {
+      color: var(--primary);
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 1.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .maintenance-box h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">EAST<span>BERG</span></a>
+      <span class="header-tag">Scheduled Update</span>
+    </div>
+  </header>
+
+  <!-- Maintenance Section -->
+  <main>
+    <div class="maintenance-box">
+      <span class="status-badge">Under Maintenance</span>
+      <h1>We’re Upgrading Our Portal</h1>
+      <p>Eastberg Educational Institution is performing scheduled system updates to improve speed, academic resources, and student services. We’ll be back online shortly.</p>
+
+      <div class="info-strip">
+        <strong>Need urgent assistance?</strong> Reach our helpdesk at <strong>admissions@eastberg.edu.in</strong> or call <strong>+91 495 276 4800</strong>.
+      </div>
+
+      <a href="contact us.html" class="btn-contact">Contact Support</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <span>Eastberg Educational Institution</span>. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
