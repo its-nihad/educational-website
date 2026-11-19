@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastberg | Inventing Future Leaders &amp; Making Impact Happen</title>
+    
+    <!-- Google Fonts: Montserrat & Poppins as specified in brand guidelines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration & Brand CSS Variables -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        eastberg: {
+                            burgundy: '#8C2C3F',
+                            burgundyDark: '#6E2030',
+                            burgundyLight: '#FDF8F9',
+                            amber: '#FCB433',
+                            amberDark: '#E59D1C',
+                            amberLight: '#FFFDF7',
+                            white: '#FFFFFF',
+                        }
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Brand CSS Custom Properties */
+        :root {
+            --color-primary: #8C2C3F;
+            --color-primary-dark: #6E2030;
+            --color-primary-soft: #FDF8F9;
+            --color-accent: #FCB433;
+            --color-accent-hover: #E59D1C;
+            --color-accent-soft: #FFFDF7;
+            --color-white: #FFFFFF;
+            --font-display: 'Montserrat', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: #2D2325;
+            background-color: var(--color-white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: var(--font-display);
+        }
+
+        /* Subtle geometric pattern overlay for Burgundy sections */
+        .bg-eastberg-pattern {
+            background-color: var(--color-primary);
+            background-image: radial-gradient(rgba(252, 180, 51, 0.14) 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFFFF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8C2C3F;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FCB433;
+        }
+
+        /* Smooth card elevation */
+        .academic-card {
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .academic-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(140, 44, 63, 0.14);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#FCB433] selection:text-[#8C2C3F]">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-[#8C2C3F] text-white text-xs sm:text-sm py-2.5 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#FCB433] animate-pulse"></span>
+                <span class="font-medium tracking-wide">Admissions Open for Academic Session 2027–28 &bull; Merit Scholarships up to 75%</span>
+            </div>
+            <div class="flex items-center gap-4 text-white/90 text-xs">
+                <a href="#events" class="hover:text-[#FCB433] transition-colors font-medium">Entrance Exam Dates</a>
+                <span>|</span>
+                <a href="#admissions" class="text-[#FCB433] font-semibold hover:underline">Download Prospectus &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#8C2C3F]/10 transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo (Custom SVG Emblem + Montserrat Wordmark) -->
+                <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
+                    <div class="w-11 h-11 rounded-2xl bg-[#8C2C3F] flex items-center justify-center shadow-md group-hover:bg-[#FCB433] transition-colors duration-300">
+                        <svg class="w-6 h-6 text-[#FCB433] group-hover:text-[#8C2C3F] transition-colors duration-300" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M16 3L3 9.5L16 16L29 9.5L16 3Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 12.5V21.5C7 21.5 11 25 16 25C21 25 25 21.5 25 21.5V12.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M29 10V18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-montserrat font-extrabold text-2xl tracking-tight text-[#8C2C3F] leading-none">EASTBERG</span>
+                        <span class="block font-poppins font-medium text-[11px] tracking-[0.2em] uppercase text-[#8C2C3F]/75 mt-1">Educational Institution</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+                    <a href="#about" class="text-sm font-medium text-[#2D2325] hover:text-[#8C2C3F] transition-colors">About</a>
+                    <a href="#academics" class="text-sm font-medium text-[#2D2325] hover:text-[#8C2C3F] transition-colors">Academics</a>
+                    <a href="#why-eastberg" class="text-sm font-medium text-[#2D2325] hover:text-[#8C2C3F] transition-colors">Campus Life</a>
+                    <a href="#events" class="text-sm font-medium text-[#2D2325] hover:text-[#8C2C3F] transition-colors">Events &amp; Notices</a>
+                    <a href="#voices" class="text-sm font-medium text-[#2D2325] hover:text-[#8C2C3F] transition-colors">Alumni</a>
+                </nav>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openTourModal()" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-[#8C2C3F] hover:bg-[#FDF8F9] transition-colors">
+                        Virtual Tour
+                    </button>
+                    <a href="#admissions" class="px-6 py-2.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-sm shadow-sm hover:shadow transition-all">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-[#8C2C3F] hover:bg-[#FDF8F9] focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Menu">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Slide-down Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-[#8C2C3F]/10 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-[#2D2325] hover:bg-[#FDF8F9] hover:text-[#8C2C3F]">About Eastberg</a>
+            <a href="#academics" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-[#2D2325] hover:bg-[#FDF8F9] hover:text-[#8C2C3F]">Academic Programs</a>
+            <a href="#why-eastberg" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-[#2D2325] hover:bg-[#FDF8F9] hover:text-[#8C2C3F]">Campus Life &amp; Research</a>
+            <a href="#events" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-[#2D2325] hover:bg-[#FDF8F9] hover:text-[#8C2C3F]">Events &amp; Notice Board</a>
+            <a href="#voices" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-[#2D2325] hover:bg-[#FDF8F9] hover:text-[#8C2C3F]">Student &amp; Alumni Voices</a>
+            <div class="pt-3 flex flex-col sm:flex-row gap-3 px-2">
+                <button onclick="openTourModal()" class="w-full py-3 rounded-xl border-2 border-[#8C2C3F] text-[#8C2C3F] font-semibold text-sm text-center">
+                    Virtual Campus Tour
+                </button>
+                <a href="#admissions" class="mobile-nav-link w-full py-3 rounded-xl bg-[#FCB433] text-[#8C2C3F] font-semibold text-sm text-center shadow">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-white overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <!-- Decorative Top-Right Soft Brand Accent -->
+        <div class="hidden lg:block absolute top-0 right-0 w-1/3 h-full bg-[#FDF8F9] rounded-bl-[4rem] -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Typography & Calls to Action -->
+                <div class="lg:col-span-7 space-y-7">
+                    <!-- Poppins Golden Amber Eyebrow Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] border border-[#FCB433]/60 shadow-xs">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#FCB433]"></span>
+                        <span class="font-poppins font-semibold text-xs sm:text-sm tracking-wide text-[#8C2C3F]">
+                            Breeze through your academic journey &bull; Intake 2027
+                        </span>
+                    </div>
+
+                    <!-- Montserrat Primary Display Heading in #8C2C3F -->
+                    <h1 class="font-montserrat font-extrabold text-4xl sm:text-5xl lg:text-6xl text-[#8C2C3F] leading-[1.12] tracking-tight">
+                        Inventing future leaders <span class="text-[#FCB433]">&amp;</span> making impact happen.
+                    </h1>
+
+                    <!-- Poppins Light/Regular Subheading -->
+                    <p class="font-poppins font-light text-lg sm:text-xl text-[#2D2325]/85 leading-relaxed max-w-2xl">
+                        At <strong class="font-semibold text-[#8C2C3F]">Eastberg</strong>, we blend rigorous academic inquiry with hands-on innovation labs—empowering curious minds to solve real-world challenges from day one.
+                    </p>
+
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#academics" class="px-8 py-4 rounded-2xl bg-[#8C2C3F] hover:bg-[#6E2030] text-white font-poppins font-semibold text-base text-center shadow-lg shadow-[#8C2C3F]/20 transition-all flex items-center justify-center gap-2.5">
+                            <span>Explore Programs</span>
+                            <svg class="w-5 h-5 text-[#FCB433]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <button onclick="openTourModal()" class="px-8 py-4 rounded-2xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-base text-center shadow-md transition-all flex items-center justify-center gap-2.5">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Virtual Campus Tour</span>
+                        </button>
+                    </div>
+
+                    <!-- Brand Typography Pairing Callout Strip -->
+                    <div class="pt-4 flex flex-wrap items-center gap-6 text-sm text-[#2D2325]/75">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-[#FCB433]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>NAAC A++ Accredited</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-[#FCB433]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>140+ Global University Partners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#8C2C3F]">
+                        <img 
+                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.src='https://placehold.co/800x920/8C2C3F/FCB433?text=Eastberg+Campus+Life'" 
+                            alt="Eastberg Students Collaborating on Campus" 
+                            class="w-full h-[430px] sm:h-[490px] object-cover opacity-90"
+                        >
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#8C2C3F] via-[#8C2C3F]/25 to-transparent"></div>
+                        
+                        <!-- Floating Bottom Overlay Card inside Hero Image -->
+                        <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-[#FCB433]/40">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#FCB433]/25 text-[#8C2C3F] font-poppins font-semibold text-xs mb-1.5">
+                                        Breeze through setup
+                                    </span>
+                                    <h2 class="font-montserrat font-bold text-lg text-[#8C2C3F]">Guided Fast-Track Admissions</h2>
+                                    <p class="font-poppins text-xs text-[#2D2325]/80 mt-1">
+                                        Complete your digital application, portfolio upload &amp; scholarship assessment in under 15 minutes.
+                                    </p>
+                                </div>
+                                <a href="#admissions" class="shrink-0 w-10 h-10 rounded-xl bg-[#8C2C3F] text-[#FCB433] flex items-center justify-center hover:bg-[#FCB433] hover:text-[#8C2C3F] transition-colors" aria-label="Start Application">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Top-Left Badge -->
+                    <div class="hidden sm:flex items-center gap-3 absolute -top-5 -left-6 bg-[#FCB433] text-[#8C2C3F] px-5 py-3.5 rounded-2xl shadow-xl">
+                        <div class="font-montserrat font-extrabold text-2xl leading-none">#1</div>
+                        <div class="font-poppins text-xs font-semibold leading-tight">
+                            Innovation &amp; Research<br>Hub in the Region
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Quick-Stats Bar -->
+            <div class="mt-16 bg-[#8C2C3F] rounded-3xl p-8 sm:p-10 shadow-xl text-white grid grid-cols-2 lg:grid-cols-4 gap-8 relative overflow-hidden">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-[#FCB433]/10 pointer-events-none"></div>
+                
+                <div class="border-l-4 border-[#FCB433] pl-4">
+                    <div class="font-montserrat font-extrabold text-3xl sm:text-4xl text-[#FCB433]">98.4%</div>
+                    <div class="font-poppins font-medium text-sm text-white/90 mt-1">Graduate Placement Rate</div>
+                </div>
+                <div class="border-l-4 border-[#FCB433] pl-4">
+                    <div class="font-montserrat font-extrabold text-3xl sm:text-4xl text-white">45+</div>
+                    <div class="font-poppins font-medium text-sm text-white/90 mt-1">Interdisciplinary Programs</div>
+                </div>
+                <div class="border-l-4 border-[#FCB433] pl-4">
+                    <div class="font-montserrat font-extrabold text-3xl sm:text-4xl text-[#FCB433]">120</div>
+                    <div class="font-poppins font-medium text-sm text-white/90 mt-1">Acre Smart Green Campus</div>
+                </div>
+                <div class="border-l-4 border-[#FCB433] pl-4">
+                    <div class="font-montserrat font-extrabold text-3xl sm:text-4xl text-white">15:1</div>
+                    <div class="font-poppins font-medium text-sm text-white/90 mt-1">Student-Faculty Mentorship</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & LEGACY SECTION -->
+    <section id="about" class="py-20 bg-[#FDF8F9] border-y border-[#8C2C3F]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6">
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="rounded-3xl overflow-hidden shadow-md bg-white p-2">
+                            <img 
+                                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" 
+                                onerror="this.src='https://placehold.co/500x550/8C2C3F/FFFFFF?text=Eastberg+Architecture'" 
+                                alt="Eastberg Historic Main Quad" 
+                                class="w-full h-56 sm:h-64 object-cover rounded-2xl"
+                            >
+                        </div>
+                        <div class="rounded-3xl bg-[#8C2C3F] text-white p-6 shadow-md">
+                            <div class="font-montserrat font-extrabold text-3xl text-[#FCB433]">Est. 1984</div>
+                            <p class="font-poppins font-light text-sm text-white/90 mt-2">
+                                Four decades of shaping ethical thinkers, scientists, and global entrepreneurs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 sm:space-y-6 pt-6 sm:pt-10">
+                        <div class="rounded-3xl bg-[#FCB433] text-[#8C2C3F] p-6 shadow-md">
+                            <div class="font-montserrat font-extrabold text-2xl">Design-First Pedagogy</div>
+                            <p class="font-poppins font-medium text-xs sm:text-sm mt-2 leading-relaxed">
+                                Project studios, industry co-labs, and real venture incubation built into every semester.
+                            </p>
+                        </div>
+                        <div class="rounded-3xl overflow-hidden shadow-md bg-white p-2">
+                            <img 
+                                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80" 
+                                onerror="this.src='https://placehold.co/500x550/FCB433/8C2C3F?text=Research+Lab'" 
+                                alt="Eastberg Robotics & AI Laboratory" 
+                                class="w-full h-56 sm:h-64 object-cover rounded-2xl"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Narrative & Core Pillars -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block font-poppins font-semibold text-sm uppercase tracking-widest text-[#FCB433] bg-[#8C2C3F] px-3.5 py-1 rounded-lg">
+                        Our Philosophy &amp; Legacy
+                    </span>
+                    <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl text-[#8C2C3F] leading-tight">
+                        Where Intellectual Rigor Meets Fearless Creation
+                    </h2>
+                    <p class="font-poppins font-light text-base sm:text-lg text-[#2D2325]/85 leading-relaxed">
+                        Founded with a mission to bridge theoretical mastery and practical execution, <strong class="font-semibold text-[#8C2C3F]">Eastberg</strong> cultivates an environment where students don't just memorize answers—they invent new possibilities and make it happen.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+                        <div class="bg-white p-5 rounded-2xl border border-[#8C2C3F]/10 shadow-xs">
+                            <div class="w-10 h-10 rounded-xl bg-[#FFFDF7] border border-[#FCB433] flex items-center justify-center text-[#8C2C3F] font-montserrat font-bold mb-3">01</div>
+                            <h3 class="font-montserrat font-bold text-lg text-[#8C2C3F]">Experiential Studios</h3>
+                            <p class="font-poppins text-sm text-[#2D2325]/75 mt-1.5">
+                                60% hands-on studio, lab, and capstone immersion mentored by industry fellows.
+                            </p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-[#8C2C3F]/10 shadow-xs">
+                            <div class="w-10 h-10 rounded-xl bg-[#FFFDF7] border border-[#FCB433] flex items-center justify-center text-[#8C2C3F] font-montserrat font-bold mb-3">02</div>
+                            <h3 class="font-montserrat font-bold text-lg text-[#8C2C3F]">Global Mobility</h3>
+                            <p class="font-poppins text-sm text-[#2D2325]/75 mt-1.5">
+                                Semester-abroad tracks across Europe, North America, and Asia-Pacific campuses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMIC PROGRAMS EXPLORER (INTERACTIVE FILTER) -->
+    <section id="academics" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="font-poppins font-semibold text-sm uppercase tracking-widest text-[#8C2C3F] bg-[#FCB433]/30 px-4 py-1.5 rounded-full">
+                    Academic Schools &amp; Degrees
+                </span>
+                <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#8C2C3F]">
+                    Programs Built for Tomorrow
+                </h2>
+                <p class="font-poppins font-light text-base sm:text-lg text-[#2D2325]/80">
+                    Explore accredited undergraduate, postgraduate, and doctoral pathways tailored to emerging global industries.
+                </p>
+            </div>
+
+            <!-- Interactive Filter Tabs -->
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-3" role="tablist" aria-label="Program Categories">
+                <button data-filter="all" class="program-tab active px-6 py-2.5 rounded-full font-poppins font-semibold text-sm bg-[#8C2C3F] text-white shadow-md transition-all">
+                    All Programs (6)
+                </button>
+                <button data-filter="undergraduate" class="program-tab px-6 py-2.5 rounded-full font-poppins font-medium text-sm bg-[#FDF8F9] text-[#8C2C3F] hover:bg-[#FCB433]/25 transition-all">
+                    Undergraduate
+                </button>
+                <button data-filter="postgraduate" class="program-tab px-6 py-2.5 rounded-full font-poppins font-medium text-sm bg-[#FDF8F9] text-[#8C2C3F] hover:bg-[#FCB433]/25 transition-all">
+                    Postgraduate
+                </button>
+                <button data-filter="research" class="program-tab px-6 py-2.5 rounded-full font-poppins font-medium text-sm bg-[#FDF8F9] text-[#8C2C3F] hover:bg-[#FCB433]/25 transition-all">
+                    Diploma &amp; Research
+                </button>
+            </div>
+
+            <!-- Programs Grid (Populated via JS for clean filtering + Modal Inspection) -->
+            <div id="programs-grid" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards rendered dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY EASTBERG / CAMPUS HIGHLIGHTS -->
+    <section id="why-eastberg" class="py-20 bg-eastberg-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+                <div class="max-w-2xl space-y-3">
+                    <span class="inline-block font-poppins font-semibold text-xs uppercase tracking-widest text-[#8C2C3F] bg-[#FCB433] px-3.5 py-1 rounded-lg">
+                        The Eastberg Advantage
+                    </span>
+                    <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl text-white">
+                        An Ecosystem Engineered for Breakthroughs
+                    </h2>
+                </div>
+                <p class="font-poppins font-light text-white/85 max-w-md text-sm sm:text-base">
+                    Every facility, scholarship, and mentorship track is designed so students breeze through setup and focus on discovery.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white text-[#2D2325] rounded-3xl p-7 shadow-xl border-b-4 border-[#FCB433]">
+                    <div class="w-12 h-12 rounded-2xl bg-[#8C2C3F] text-[#FCB433] flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-xl text-[#8C2C3F]">Innovation &amp; AI Hubs</h3>
+                    <p class="font-poppins text-sm text-[#2D2325]/80 mt-2.5 leading-relaxed">
+                        24/7 access to robotics cleanrooms, high-performance GPU clusters, and seed-funded venture incubators.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white text-[#2D2325] rounded-3xl p-7 shadow-xl border-b-4 border-[#FCB433]">
+                    <div class="w-12 h-12 rounded-2xl bg-[#8C2C3F] text-[#FCB433] flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-xl text-[#8C2C3F]">Global Exchange</h3>
+                    <p class="font-poppins text-sm text-[#2D2325]/80 mt-2.5 leading-relaxed">
+                        Dual-degree pathways and summer research fellowships with 140+ partner institutions worldwide.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white text-[#2D2325] rounded-3xl p-7 shadow-xl border-b-4 border-[#FCB433]">
+                    <div class="w-12 h-12 rounded-2xl bg-[#8C2C3F] text-[#FCB433] flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-xl text-[#8C2C3F]">Merit Scholarships</h3>
+                    <p class="font-poppins text-sm text-[#2D2325]/80 mt-2.5 leading-relaxed">
+                        Over $4.5M awarded annually in Eastberg Founders' Grants, sports bursaries, and need-blind financial aid.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white text-[#2D2325] rounded-3xl p-7 shadow-xl border-b-4 border-[#FCB433]">
+                    <div class="w-12 h-12 rounded-2xl bg-[#8C2C3F] text-[#FCB433] flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-xl text-[#8C2C3F]">Industry Mentorship</h3>
+                    <p class="font-poppins text-sm text-[#2D2325]/80 mt-2.5 leading-relaxed">
+                        Mandatory paid co-op internships and executive mentorship from Fortune 500 leaders &amp; founders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING EVENTS & NOTICE BOARD -->
+    <section id="events" class="py-20 bg-[#FDF8F9]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Left Column: Upcoming Events (7 cols) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="font-poppins font-semibold text-xs uppercase tracking-widest text-[#8C2C3F] bg-[#FCB433]/40 px-3 py-1 rounded-md">
+                            Academic Calendar
+                        </span>
+                        <h2 class="font-montserrat font-extrabold text-3xl text-[#8C2C3F] mt-2">
+                            Upcoming Campus Events
+                        </h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Event Item 1 -->
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#8C2C3F]/10 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#FCB433] transition-colors">
+                            <div class="flex items-start sm:items-center gap-5">
+                                <div class="shrink-0 w-16 h-16 rounded-2xl bg-[#8C2C3F] text-white flex flex-col items-center justify-center text-center">
+                                    <span class="font-poppins text-xs uppercase tracking-wider text-[#FCB433] font-semibold">DEC</span>
+                                    <span class="font-montserrat font-extrabold text-2xl leading-none mt-0.5">12</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-semibold text-[#8C2C3F] bg-[#FFFDF7] border border-[#FCB433] px-2.5 py-0.5 rounded-full">Admissions</span>
+                                    <h3 class="font-montserrat font-bold text-lg text-[#8C2C3F] mt-1">Eastberg Winter Open House &amp; Lab Showcase</h3>
+                                    <p class="font-poppins text-xs sm:text-sm text-[#2D2325]/75 mt-0.5">Main Auditorium &bull; 10:00 AM – 4:00 PM</p>
+                                </div>
+                            </div>
+                            <button onclick="openEventModal('Eastberg Winter Open House & Lab Showcase', 'December 12, 2026')" class="shrink-0 px-4 py-2.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-xs sm:text-sm transition-colors">
+                                RSVP Free
+                            </button>
+                        </div>
+
+                        <!-- Event Item 2 -->
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#8C2C3F]/10 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#FCB433] transition-colors">
+                            <div class="flex items-start sm:items-center gap-5">
+                                <div class="shrink-0 w-16 h-16 rounded-2xl bg-[#8C2C3F] text-white flex flex-col items-center justify-center text-center">
+                                    <span class="font-poppins text-xs uppercase tracking-wider text-[#FCB433] font-semibold">JAN</span>
+                                    <span class="font-montserrat font-extrabold text-2xl leading-none mt-0.5">18</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-semibold text-[#8C2C3F] bg-[#FFFDF7] border border-[#FCB433] px-2.5 py-0.5 rounded-full">Entrance Exam</span>
+                                    <h3 class="font-montserrat font-bold text-lg text-[#8C2C3F] mt-1">ESAT 2027 National Aptitude &amp; Scholarship Test</h3>
+                                    <p class="font-poppins text-xs sm:text-sm text-[#2D2325]/75 mt-0.5">Online Proctored &amp; 24 Test Centers &bull; 9:30 AM</p>
+                                </div>
+                            </div>
+                            <button onclick="openEventModal('ESAT 2027 National Aptitude & Scholarship Test', 'January 18, 2027')" class="shrink-0 px-4 py-2.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-xs sm:text-sm transition-colors">
+                                Register Now
+                            </button>
+                        </div>
+
+                        <!-- Event Item 3 -->
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#8C2C3F]/10 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#FCB433] transition-colors">
+                            <div class="flex items-start sm:items-center gap-5">
+                                <div class="shrink-0 w-16 h-16 rounded-2xl bg-[#8C2C3F] text-white flex flex-col items-center justify-center text-center">
+                                    <span class="font-poppins text-xs uppercase tracking-wider text-[#FCB433] font-semibold">FEB</span>
+                                    <span class="font-montserrat font-extrabold text-2xl leading-none mt-0.5">06</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-semibold text-[#8C2C3F] bg-[#FFFDF7] border border-[#FCB433] px-2.5 py-0.5 rounded-full">Annual Fest</span>
+                                    <h3 class="font-montserrat font-bold text-lg text-[#8C2C3F] mt-1">IGNITE '27: Tech, Design &amp; Cultural Symposium</h3>
+                                    <p class="font-poppins text-xs sm:text-sm text-[#2D2325]/75 mt-0.5">Eastberg Innovation Arena &bull; 3-Day Festival</p>
+                                </div>
+                            </div>
+                            <button onclick="openEventModal('IGNITE 27: Tech, Design & Cultural Symposium', 'February 6–8, 2027')" class="shrink-0 px-4 py-2.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-xs sm:text-sm transition-colors">
+                                Get Pass
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Official Notice Board (5 cols) -->
+                <div class="lg:col-span-5">
+                    <div class="bg-[#8C2C3F] text-white rounded-3xl p-7 sm:p-8 shadow-xl h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between border-b border-white/15 pb-4">
+                                <h3 class="font-montserrat font-bold text-2xl text-white flex items-center gap-2.5">
+                                    <span class="w-3 h-3 rounded-full bg-[#FCB433]"></span>
+                                    Notice Board
+                                </h3>
+                                <span class="text-xs font-poppins uppercase tracking-wider text-[#FCB433] font-semibold">Updated Live</span>
+                            </div>
+
+                            <ul class="mt-6 space-y-5 divide-y divide-white/10">
+                                <li class="pt-1">
+                                    <span class="text-xs font-semibold text-[#FCB433]">NEW &bull; Nov 18, 2026</span>
+                                    <p class="font-poppins text-sm text-white/95 mt-1 leading-snug">
+                                        Early Action Round-1 Applications for B.Tech, BBA, and B.Des close on December 20, 2026.
+                                    </p>
+                                </li>
+                                <li class="pt-4">
+                                    <span class="text-xs font-semibold text-[#FCB433]">SCHOLARSHIP &bull; Nov 14, 2026</span>
+                                    <p class="font-poppins text-sm text-white/95 mt-1 leading-snug">
+                                        Applications invited for the Eastberg Women in STEM &amp; Leadership Fellowship (100% Tuition Waiver).
+                                    </p>
+                                </li>
+                                <li class="pt-4">
+                                    <span class="text-xs font-semibold text-[#FCB433]">RESEARCH &bull; Nov 09, 2026</span>
+                                    <p class="font-poppins text-sm text-white/95 mt-1 leading-snug">
+                                        Center for Sustainable Energy secures $1.8M international grant for clean microgrid research.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-5 border-t border-white/15">
+                            <a href="#admissions" class="w-full py-3.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <span>Request Academic Handbook</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT & ALUMNI VOICES -->
+    <section id="voices" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+                <span class="font-poppins font-semibold text-xs uppercase tracking-widest text-[#8C2C3F] bg-[#FCB433]/35 px-3.5 py-1 rounded-full">
+                    Community Stories
+                </span>
+                <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl text-[#8C2C3F]">
+                    Voices of Eastberg
+                </h2>
+                <p class="font-poppins font-light text-base text-[#2D2325]/80">
+                    Hear how our students and alumni turn bold classroom concepts into thriving global careers.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-[#8C2C3F]/12 shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#FCB433] mb-4" aria-label="5 out of 5 stars">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                        </div>
+                        <p class="font-poppins font-light text-sm sm:text-base text-[#2D2325]/85 leading-relaxed italic">
+                            "Eastberg's AI &amp; Robotics Lab gave me the confidence and mentorship to file two patents before graduation. The faculty truly embody inventing and making it happen."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-[#8C2C3F]/10 flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full bg-[#8C2C3F] text-[#FCB433] font-montserrat font-bold flex items-center justify-center">
+                            AR
+                        </div>
+                        <div>
+                            <div class="font-montserrat font-bold text-sm text-[#8C2C3F]">Ananya Rao</div>
+                            <div class="font-poppins text-xs text-[#2D2325]/70">B.Tech AI '25 &bull; ML Engineer, Zurich</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-[#FDF8F9] rounded-3xl p-8 border-2 border-[#FCB433] shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#FCB433] mb-4" aria-label="5 out of 5 stars">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                        </div>
+                        <p class="font-poppins font-light text-sm sm:text-base text-[#2D2325]/85 leading-relaxed italic">
+                            "From day one, onboarding was a breeze. Our MBA capstone connected my team directly with venture mentors—we launched our clean-tech startup right on campus."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-[#8C2C3F]/10 flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full bg-[#FCB433] text-[#8C2C3F] font-montserrat font-bold flex items-center justify-center">
+                            MK
+                        </div>
+                        <div>
+                            <div class="font-montserrat font-bold text-sm text-[#8C2C3F]">Marcus Vance-Kerr</div>
+                            <div class="font-poppins text-xs text-[#2D2325]/70">MBA Strategy '24 &bull; Co-Founder, GridPulse</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-[#8C2C3F]/12 shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#FCB433] mb-4" aria-label="5 out of 5 stars">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                        </div>
+                        <p class="font-poppins font-light text-sm sm:text-base text-[#2D2325]/85 leading-relaxed italic">
+                            "The interdisciplinary freedom between Design and Biotechnology allowed me to build sustainable biomaterials for my thesis, leading straight to my PhD fellowship."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-[#8C2C3F]/10 flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full bg-[#8C2C3F] text-[#FCB433] font-montserrat font-bold flex items-center justify-center">
+                            SL
+                        </div>
+                        <div>
+                            <div class="font-montserrat font-bold text-sm text-[#8C2C3F]">Sophia Lindqvist</div>
+                            <div class="font-poppins text-xs text-[#2D2325]/70">M.Des Bio-Design '25 &bull; Research Fellow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSIONS ENQUIRY & CAMPUS VISIT FORM -->
+    <section id="admissions" class="py-20 bg-[#FDF8F9] border-t border-[#8C2C3F]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-[#8C2C3F]/10 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                
+                <!-- Left Burgundy Info Panel -->
+                <div class="lg:col-span-5 bg-[#8C2C3F] text-white p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -bottom-16 -right-16 w-56 h-56 rounded-full bg-[#FCB433]/15 pointer-events-none"></div>
+                    
+                    <div class="space-y-5 relative z-10">
+                        <span class="inline-block px-3.5 py-1 rounded-lg bg-[#FCB433] text-[#8C2C3F] font-poppins font-semibold text-xs uppercase tracking-wider">
+                            Admissions 2027–28
+                        </span>
+                        <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl leading-tight">
+                            Begin Your Eastberg Journey Today
+                        </h2>
+                        <p class="font-poppins font-light text-white/85 text-sm sm:text-base leading-relaxed">
+                            Have questions about eligibility, scholarships, or campus tours? Submit an enquiry and an Eastberg Admissions Counselor will connect with you within 24 hours.
+                        </p>
+
+                        <div class="pt-4 space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-[#FCB433]/20 text-[#FCB433] flex items-center justify-center shrink-0 font-bold">&#10003;</span>
+                                <span>1-on-1 Personalized Program &amp; Career Counseling</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-[#FCB433]/20 text-[#FCB433] flex items-center justify-center shrink-0 font-bold">&#10003;</span>
+                                <span>Complimentary Guided Campus &amp; Lab Walkthrough</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-[#FCB433]/20 text-[#FCB433] flex items-center justify-center shrink-0 font-bold">&#10003;</span>
+                                <span>Instant Merit Scholarship Eligibility Check</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-6 border-t border-white/15 relative z-10">
+                        <div class="text-xs uppercase tracking-wider text-[#FCB433] font-semibold">Admissions Helpline</div>
+                        <div class="font-montserrat font-bold text-xl mt-1">+1 (800) 555-0194 &bull; admissions@eastberg.edu</div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Enquiry Form -->
+                <div class="lg:col-span-7 p-8 sm:p-12">
+                    <form id="admissions-form" class="space-y-5" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="full-name" class="block font-poppins font-medium text-sm text-[#8C2C3F] mb-1.5">Full Name *</label>
+                                <input type="text" id="full-name" name="fullName" required placeholder="e.g., Jordan Taylor" class="w-full px-4 py-3 rounded-xl border border-[#8C2C3F]/20 focus:border-[#8C2C3F] focus:ring-2 focus:ring-[#FCB433]/50 outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="email" class="block font-poppins font-medium text-sm text-[#8C2C3F] mb-1.5">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="jordan@example.com" class="w-full px-4 py-3 rounded-xl border border-[#8C2C3F]/20 focus:border-[#8C2C3F] focus:ring-2 focus:ring-[#FCB433]/50 outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="phone" class="block font-poppins font-medium text-sm text-[#8C2C3F] mb-1.5">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 234-5678" class="w-full px-4 py-3 rounded-xl border border-[#8C2C3F]/20 focus:border-[#8C2C3F] focus:ring-2 focus:ring-[#FCB433]/50 outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="program-select" class="block font-poppins font-medium text-sm text-[#8C2C3F] mb-1.5">Program of Interest *</label>
+                                <select id="program-select" name="program" required class="w-full px-4 py-3 rounded-xl border border-[#8C2C3F]/20 focus:border-[#8C2C3F] focus:ring-2 focus:ring-[#FCB433]/50 outline-none transition-all text-sm bg-white">
+                                    <option value="">Select a Program...</option>
+                                    <option value="B.Tech in Computer Science & AI">B.Tech in Computer Science &amp; AI</option>
+                                    <option value="BBA in Global Business & Entrepreneurship">BBA in Global Business &amp; Entrepreneurship</option>
+                                    <option value="B.Des in Product & Interaction Design">B.Des in Product &amp; Interaction Design</option>
+                                    <option value="MBA in Innovation & Digital Strategy">MBA in Innovation &amp; Digital Strategy</option>
+                                    <option value="M.Sc in Biotechnology & Bio-Engineering">M.Sc in Biotechnology &amp; Bio-Engineering</option>
+                                    <option value="Postgraduate Diploma in Data Science">PG Diploma in Applied Data Science</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block font-poppins font-medium text-sm text-[#8C2C3F] mb-1.5">Questions or Preferred Campus Visit Date</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Tell us about your academic interests or schedule a campus tour..." class="w-full px-4 py-3 rounded-xl border border-[#8C2C3F]/20 focus:border-[#8C2C3F] focus:ring-2 focus:ring-[#FCB433]/50 outline-none transition-all text-sm"></textarea>
+                        </div>
+
+                        <!-- Form Validation / Feedback Banner -->
+                        <div id="form-feedback" class="hidden rounded-xl p-4 text-sm font-medium"></div>
+
+                        <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-bold text-sm sm:text-base shadow-md hover:shadow-lg transition-all cursor-pointer">
+                            Submit Admissions Enquiry &rarr;
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#8C2C3F] text-white pt-16 pb-10 border-t-4 border-[#FCB433]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/15">
+                
+                <!-- Brand Column -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#FCB433] flex items-center justify-center text-[#8C2C3F]">
+                            <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 3L3 9.5L16 16L29 9.5L16 3Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 12.5V21.5C7 21.5 11 25 16 25C21 25 25 21.5 25 21.5V12.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-montserrat font-extrabold text-2xl tracking-tight text-white">EASTBERG</span>
+                    </div>
+                    <p class="font-poppins font-light text-sm text-white/80 leading-relaxed">
+                        Inventing and making it happen. Eastberg Educational Institution is dedicated to transformative education, pioneering research, and global leadership.
+                    </p>
+                    <p class="font-poppins text-xs text-[#FCB433]">
+                        100 Eastberg University Boulevard, Academic Valley, EB 40210
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-montserrat font-bold text-sm uppercase tracking-wider text-[#FCB433]">Academics</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#academics" class="hover:text-[#FCB433] transition-colors">Engineering &amp; AI</a></li>
+                        <li><a href="#academics" class="hover:text-[#FCB433] transition-colors">Business School</a></li>
+                        <li><a href="#academics" class="hover:text-[#FCB433] transition-colors">Design &amp; Architecture</a></li>
+                        <li><a href="#academics" class="hover:text-[#FCB433] transition-colors">Biotechnology</a></li>
+                        <li><a href="#academics" class="hover:text-[#FCB433] transition-colors">Doctoral Research</a></li>
+                    </ul>
+                </div>
+
+                <!-- Admissions & Campus -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-montserrat font-bold text-sm uppercase tracking-wider text-[#FCB433]">Campus</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#about" class="hover:text-[#FCB433] transition-colors">About Eastberg</a></li>
+                        <li><a href="#admissions" class="hover:text-[#FCB433] transition-colors">Scholarships &amp; Aid</a></li>
+                        <li><a href="#events" class="hover:text-[#FCB433] transition-colors">Academic Calendar</a></li>
+                        <li><a href="#why-eastberg" class="hover:text-[#FCB433] transition-colors">Innovation Hubs</a></li>
+                        <li><a href="#voices" class="hover:text-[#FCB433] transition-colors">Alumni Network</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-montserrat font-bold text-sm uppercase tracking-wider text-[#FCB433]">Eastberg Dispatch</h4>
+                    <p class="font-poppins font-light text-sm text-white/80">
+                        Subscribe for research breakthroughs, admissions alerts, and public lecture invites.
+                    </p>
+                    <form id="newsletter-form" class="flex gap-2 pt-1">
+                        <input type="email" id="newsletter-email" required placeholder="Enter your email" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 text-sm focus:outline-none focus:border-[#FCB433]">
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-sm shrink-0 transition-colors">
+                            Join
+                        </button>
+                    </form>
+                    <p id="newsletter-msg" class="text-xs text-[#FCB433] hidden"></p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70">
+                <p>&copy; 2026 Eastberg Educational Institution. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#about" class="hover:text-[#FCB433] transition-colors">Privacy Policy</a>
+                    <a href="#about" class="hover:text-[#FCB433] transition-colors">Academic Charter</a>
+                    <a href="#admissions" class="hover:text-[#FCB433] transition-colors">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL (Program Curriculum / Virtual Tour / Event RSVP) -->
+    <div id="interactive-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border-t-8 border-[#FCB433] relative animate-[fadeIn_0.2s_ease-out]">
+            <button onclick="closeModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#FDF8F9] text-[#8C2C3F] hover:bg-[#8C2C3F] hover:text-white flex items-center justify-center transition-colors" aria-label="Close Modal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <div id="modal-badge" class="inline-block px-3 py-1 rounded-full bg-[#FCB433]/30 text-[#8C2C3F] font-poppins font-semibold text-xs mb-3">
+                Program Details
+            </div>
+            <h3 id="modal-title" class="font-montserrat font-extrabold text-2xl text-[#8C2C3F] pr-8">
+                Modal Title
+            </h3>
+            <div id="modal-body" class="mt-4 font-poppins text-sm text-[#2D2325]/85 space-y-4">
+                <!-- Dynamic Modal Content -->
+            </div>
+            <div class="mt-7 pt-4 border-t border-[#8C2C3F]/10 flex flex-col sm:flex-row justify-end gap-3">
+                <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl border border-[#8C2C3F]/25 text-[#8C2C3F] font-poppins font-medium text-sm hover:bg-[#FDF8F9]">
+                    Close
+                </button>
+                <a id="modal-cta" href="#admissions" onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-[#8C2C3F] hover:bg-[#6E2030] text-white font-poppins font-semibold text-sm text-center">
+                    Apply for This Program
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Interactivity -->
+    <script>
+        // Academic Programs Data Repository
+        const eastbergPrograms = [
+            {
+                id: 'btech-ai',
+                category: 'undergraduate',
+                level: 'Undergraduate &bull; 4 Years',
+                title: 'B.Tech in Computer Science & Artificial Intelligence',
+                school: 'School of Computing & Engineering',
+                eligibility: '10+2 with Physics, Mathematics (Min. 75%) + ESAT',
+                highlights: [
+                    'Core tracks in Generative AI, Autonomous Robotics & Cloud Architecture',
+                    '6-month paid industry co-op in final year',
+                    'Dedicated GPU compute cluster access for every student'
+                ]
+            },
+            {
+                id: 'bba-global',
+                category: 'undergraduate',
+                level: 'Undergraduate &bull; 3 Years',
+                title: 'BBA in Global Business & Entrepreneurship',
+                school: 'Eastberg School of Management',
+                eligibility: '10+2 in any stream (Min. 70%) + Personal Interview',
+                highlights: [
+                    'Live venture creation studio with $10k seed-pitch opportunities',
+                    'International immersion semester in Singapore or London',
+                    'Case-method pedagogy led by industry executives'
+                ]
+            },
+            {
+                id: 'bdes-product',
+                category: 'undergraduate',
+                level: 'Undergraduate &bull; 4 Years',
+                title: 'B.Des in Product, UX & Spatial Architecture',
+                school: 'School of Design & Architecture',
+                eligibility: '10+2 in any stream + Design Portfolio Review',
+                highlights: [
+                    'Rapid prototyping workshops with 3D fabrication & AR/VR labs',
+                    'Human-centered design sprints with Fortune 500 design teams',
+                    'Annual Eastberg Design Showcase exhibition'
+                ]
+            },
+            {
+                id: 'mba-strategy',
+                category: 'postgraduate',
+                level: 'Postgraduate &bull; 2 Years',
+                title: 'MBA in Innovation & Digital Strategy',
+                school: 'Eastberg School of Management',
+                eligibility: 'Bachelor’s Degree (Min. 60%) + GMAT / CAT / ESAT-PG',
+                highlights: [
+                    'Executive mentorship from global CXOs and venture partners',
+                    'Specializations in FinTech, Product Management & Sustainable Supply Chains',
+                    '99% placement record with top consulting and tech firms'
+                ]
+            },
+            {
+                id: 'msc-biotech',
+                category: 'postgraduate',
+                level: 'Postgraduate &bull; 2 Years',
+                title: 'M.Sc in Biotechnology & Bio-Engineering',
+                school: 'School of Life Sciences',
+                eligibility: 'B.Sc in Life Sciences / Chemistry / Biotech (Min. 65%)',
+                highlights: [
+                    'BSL-2 wet labs for genomics, CRISPR & sustainable biomaterials',
+                    'Joint research publications with international life-science institutes',
+                    'Full research assistantships available for top scorers'
+                ]
+            },
+            {
+                id: 'pgd-datascience',
+                category: 'research',
+                level: 'Diploma & Research &bull; 1 Year',
+                title: 'PG Diploma & Fellowship in Applied Data Science',
+                school: 'Eastberg Institute for Advanced Research',
+                eligibility: 'Graduates or Working Professionals in STEM / Economics',
+                highlights: [
+                    'Weekend + evening hybrid studio format for seamless setup',
+                    'Capstone research thesis solving real civic and healthcare datasets',
+                    'Direct pathway into Eastberg Ph.D. Doctoral Candidacy'
+                ]
+            }
+        ];
+
+        // Render Program Cards into Grid
+        const programsGrid = document.getElementById('programs-grid');
+        const filterButtons = document.querySelectorAll('.program-tab');
+
+        function renderPrograms(filter = 'all') {
+            programsGrid.innerHTML = '';
+            const filtered = filter === 'all'
+                ? eastbergPrograms
+                : eastbergPrograms.filter(p => p.category === filter);
+
+            filtered.forEach(program => {
+                const card = document.createElement('article');
+                card.className = 'academic-card bg-white rounded-3xl p-7 border border-[#8C2C3F]/12 shadow-sm flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-[#FFFDF7] border border-[#FCB433] text-[#8C2C3F] font-poppins font-semibold text-xs">
+                                ${program.level}
+                            </span>
+                        </div>
+                        <div class="text-xs font-poppins font-medium text-[#8C2C3F]/70 uppercase tracking-wider mb-1">
+                            ${program.school}
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl text-[#8C2C3F] leading-snug">
+                            ${program.title}
+                        </h3>
+                        <p class="font-poppins text-xs text-[#2D2325]/75 mt-3 bg-[#FDF8F9] p-3 rounded-xl">
+                            <strong class="text-[#8C2C3F]">Eligibility:</strong> ${program.eligibility}
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#8C2C3F]/10 flex items-center justify-between">
+                        <button onclick="openProgramModal('${program.id}')" class="font-poppins font-semibold text-sm text-[#8C2C3F] hover:text-[#FCB433] transition-colors flex items-center gap-1.5 cursor-pointer">
+                            <span>View Curriculum</span>
+                            <span>&rarr;</span>
+                        </button>
+                        <a href="#admissions" onclick="preselectProgram('${program.title}')" class="px-4 py-2 rounded-xl bg-[#FCB433] hover:bg-[#E59D1C] text-[#8C2C3F] font-poppins font-semibold text-xs transition-colors">
+                            Apply
+                        </a>
+                    </div>
+                `;
+                programsGrid.appendChild(card);
+            });
+        }
+
+        // Tab Filtering Interaction
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-[#8C2C3F]', 'text-white', 'shadow-md');
+                    b.classList.add('bg-[#FDF8F9]', 'text-[#8C2C3F]');
+                });
+                btn.classList.remove('bg-[#FDF8F9]', 'text-[#8C2C3F]');
+                btn.classList.add('bg-[#8C2C3F]', 'text-white', 'shadow-md');
+                renderPrograms(btn.dataset.filter);
+            });
+        });
+
+        // Preselect Program in Admissions Form
+        function preselectProgram(programTitle) {
+            const select = document.getElementById('program-select');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(programTitle.substring(0, 12))) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Modal Controls
+        const modal = document.getElementById('interactive-modal');
+        const modalBadge = document.getElementById('modal-badge');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalCta = document.getElementById('modal-cta');
+
+        function openProgramModal(programId) {
+            const prog = eastbergPrograms.find(p => p.id === programId);
+            if (!prog) return;
+            modalBadge.innerHTML = prog.level;
+            modalTitle.textContent = prog.title;
+            modalBody.innerHTML = `
+                <p class="font-medium text-[#8C2C3F]">${prog.school}</p>
+                <div class="bg-[#FDF8F9] p-4 rounded-2xl border border-[#8C2C3F]/10">
+                    <div class="font-semibold text-xs uppercase tracking-wider text-[#8C2C3F] mb-2">Key Curriculum Highlights</div>
+                    <ul class="space-y-2 text-sm">
+                        ${prog.highlights.map(item => `<li class="flex items-start gap-2"><span class="text-[#FCB433] font-bold">&#10003;</span><span>${item}</span></li>`).join('')}
+                    </ul>
+                </div>
+                <p class="text-xs text-[#2D2325]/75"><strong>Admissions Criteria:</strong> ${prog.eligibility}</p>
+            `;
+            modalCta.textContent = 'Apply for This Program';
+            modalCta.href = '#admissions';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openTourModal() {
+            modalBadge.textContent = '360° Campus Experience';
+            modalTitle.textContent = 'Explore Eastberg’s 120-Acre Smart Campus';
+            modalBody.innerHTML = `
+                <div class="rounded-2xl overflow-hidden border border-[#8C2C3F]/15 bg-[#8C2C3F] text-white p-5 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#FCB433]">Interactive Walkthrough</span>
+                        <span class="text-xs bg-white/15 px-2.5 py-0.5 rounded-full">4 Stops Available</span>
+                    </div>
+                    <p class="text-sm text-white/90">
+                        Step inside the <strong>Eastberg Innovation Foundry</strong>, the <strong>Central Digital Library</strong>, our <strong>Olympic Sports Complex</strong>, and <strong>Residential Commons</strong>.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2.5 pt-2 text-xs">
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">&#127979; Historic Main Quad</div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">&#129302; AI &amp; Robotics Wing</div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">&#128218; 24/7 Knowledge Commons</div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">&#127795; Eco-Residential Halls</div>
+                    </div>
+                </div>
+                <p class="text-xs text-[#2D2325]/75">Prefer an in-person visit? Book a guided student-led campus tour using our Admissions Enquiry form.</p>
+            `;
+            modalCta.textContent = 'Book In-Person Campus Visit';
+            modalCta.href = '#admissions';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openEventModal(eventName, eventDate) {
+            modalBadge.textContent = eventDate;
+            modalTitle.textContent = eventName;
+            modalBody.innerHTML = `
+                <p>Reserve your complimentary visitor pass for <strong>${eventName}</strong> at Eastberg Educational Institution.</p>
+                <div class="bg-[#FFFDF7] border border-[#FCB433] p-4 rounded-2xl text-xs space-y-1.5">
+                    <div><strong>Venue:</strong> Eastberg Main Campus, Academic Valley</div>
+                    <div><strong>Includes:</strong> Faculty Q&amp;A, Lab Access &amp; Welcome Kit</div>
+                </div>
+            `;
+            modalCta.textContent = 'Complete Registration';
+            modalCta.href = '#admissions';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal on backdrop click or Escape key
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+            mobileMenuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Admissions Form Validation & Instant Confirmation
+        const admissionsForm = document.getElementById('admissions-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        admissionsForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const program = document.getElementById('program-select').value;
+
+            if (!name || !email || !phone || !program) {
+                formFeedback.className = 'rounded-xl p-4 text-sm font-medium bg-[#FDF8F9] text-[#8C2C3F] border border-[#8C2C3F]';
+                formFeedback.textContent = 'Please complete all required fields (*) so our counselors can assist you.';
+                formFeedback.classList.remove('hidden');
+                return;
+            }
+
+            formFeedback.className = 'rounded-xl p-4 text-sm font-medium bg-[#FFFDF7] text-[#8C2C3F] border border-[#FCB433]';
+            formFeedback.innerHTML = `<strong>Thank you, ${name}!</strong> Your enquiry for <em>${program}</em> has been received. Reference ID: <strong>#EB-${Math.floor(10000 + Math.random() * 90000)}</strong>.`;
+            formFeedback.classList.remove('hidden');
+            admissionsForm.reset();
+        });
+
+        // Newsletter Subscription Feedback
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterMsg = document.getElementById('newsletter-msg');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            if (emailInput.value.trim()) {
+                newsletterMsg.textContent = 'Subscribed! Welcome to the Eastberg academic community.';
+                newsletterMsg.classList.remove('hidden');
+                emailInput.value = '';
+            }
+        });
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPrograms('all');
+        });
+    </script>
+</body>
+</html>
